@@ -8,15 +8,15 @@ namespace tabuleiro
 {
     internal class Peca
     {
-        public Posicao Posicao { get; set; }
-        public Cor Cor { get; protected set; }
+        public Posicao posicao { get; set; }
+        public Cor cor { get; protected set; }
         public int qntMovimentos { get; protected set;}
         public Tabuleiro tab { get; protected set;  }
 
-        public Peca(Posicao posicao, Cor cor, Tabuleiro tab)
+        public Peca(Tabuleiro tab, Cor cor)
         {
-            Posicao = posicao;
-            Cor = cor;
+            this.posicao = null;
+            this.cor = cor;
             qntMovimentos = 0;
             this.tab = tab;
         }
