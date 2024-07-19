@@ -57,7 +57,7 @@ namespace Xadrez_Console
             {
                 Console.WriteLine(e.Message);
             }
-
+            //rçklgfdrtgbksuyrtwiiwufygioweuyto
             Console.ReadKey();
         }
     }
