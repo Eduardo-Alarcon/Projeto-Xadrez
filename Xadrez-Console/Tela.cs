@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using tabuleiro;
 using xadrez;
-using Xadrez_Console.xadrez;
+using Xadrez_Console;
 
 namespace Xadrez_Console
 {
