@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using tabuleiro;
 using xadrez;
 using Xadrez_Console.tabuleiro;
-using xadrez;
 using Xadrez_Console;
 
 namespace Xadrez_Console
