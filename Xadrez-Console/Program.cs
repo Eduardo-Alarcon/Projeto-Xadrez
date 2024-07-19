@@ -16,34 +16,31 @@ namespace Xadrez_Console
         {
             try
             {
-                PartidaDeXadrez part = new PartidaDeXadrez();
+                PartidaDeXadrez partida = new PartidaDeXadrez();
                 
-                while (!part.terminada)
+                while (!partida.terminada)
                 {
                     try
                     {
                         Console.Clear();
-                        Tela.imprimirTabuleiro(part.tab);
-                        Console.WriteLine();
-                        Console.WriteLine("Turno: " + part.turno);
-                        Console.WriteLine("Aguardando jogada: " + part.jogadorAtual);
+                        Tela.imprimirPartida(partida);
 
                         Console.WriteLine();
                         Console.Write("Origem: ");
                         Posicao origem = Tela.lerPosicaoXadrez().toPosicao();
-                        part.validarPosicaoDeOrigem(origem);
+                        partida.validarPosicaoDeOrigem(origem);
 
-                        bool[,] posicoesPossiveis = part.tab.peca(origem).movimentosPossiveis();
+                        bool[,] posicoesPossiveis = partida.tab.peca(origem).movimentosPossiveis();
 
                         Console.Clear();
-                        Tela.imprimirTabuleiro(part.tab, posicoesPossiveis);
+                        Tela.imprimirTabuleiro(partida.tab, posicoesPossiveis);
 
                         Console.WriteLine();
                         Console.Write("Destino: ");
                         Posicao destino = Tela.lerPosicaoXadrez().toPosicao();
-                        part.validarPosicaoDeDestino(origem, destino);
+                        partida.validarPosicaoDeDestino(origem, destino);
 
-                        part.realizaJogada(origem, destino);
+                        partida.realizaJogada(origem, destino);
                     }
                     catch ( TabuleiroException e)
                     {
@@ -57,7 +54,6 @@ namespace Xadrez_Console
             {
                 Console.WriteLine(e.Message);
             }
-            //rçklgfdrtgbksuyrtwiiwufygioweuyto
             Console.ReadKey();
         }
     }
